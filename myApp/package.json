@@ -1,0 +1,14 @@
+{
+  "name": "dharani",
+  "version": "1.0.0",
+  "description": "myapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "Test"
+  },
+  "author": "Dharanitharan",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.1.1"
+  }
+}

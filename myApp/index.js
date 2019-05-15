@@ -13,11 +13,11 @@ var transporter = nodemailer.createTransport({
 
 var mailOptions = {
   from: 'dharanitharan.it@gmail.com',
-  to: 'venkatreddy3093712@gmail.com, dharani.infonet@gmail.com, ureshsrna41@gmail.com, methapmasthan@gmail.com',
-  cc: 'santhoshmgsp@gmail.com, ureshsrna4@gmail.com',
+  to: 'venkatreddy3093712@gmail.com, dharani.infonet@gmail.com',
+  cc: 'ureshsrna4@gmail.com',
   subject:'Dharanitharan',
   text: 'Hi Guys....! This is Dharanitharan',
-  html: '<h1>Welcome</h1><p>That was easy!</p>'
+  html: '<h1 style="color:red">Welcome</h1><p>That was easy!</p>'
 };
 
 transporter.sendMail(mailOptions, function(error, info){

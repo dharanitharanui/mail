@@ -4,11 +4,20 @@ var nodemailer = require('nodemailer');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.write('<form method="post" enctype="multipart/form-data">');
-  res.write('<input type="text" id="to"><br>');
-  res.write('<input type="button">');
+  res.write('<input type="text" id="toMail"><br>');
+  res.write('<button onclick="sendMail()">Send</button>');
   res.write('</form>');
   return res.end();
+
 }).listen(8080);
+
+
+function sendMail(){
+  
+  alert("Test");
+  var toMailId = document.getElementById("toMail").value; 
+  alert(toMailId);
+ }
 
 
 var transporter = nodemailer.createTransport({
@@ -24,12 +33,12 @@ var transporter = nodemailer.createTransport({
 
 var mailOptions = {
   from: '"Dharanitharan" <dharanitharan.se@gmail.com>',
-  to:  'dharanitharan.m@enterprisetouch.net',
+  to:  'dharani.infonet@gmail.com',
   //cc: 'ureshsrna4@gmail.com',
   //bcc: 'ureshsrna4@gmail.com',
   subject:'Node.Js Test mail - Dharanitharan',
   text: 'Hi Guys....! This is Dharanitharan',
-  html: '<h1 id="uresh" style="color:red">Welcome</h1><p>That was easy!</p>',
+  html: './own_modules/mail_temp.html',
   attachments:
    [  
     {
